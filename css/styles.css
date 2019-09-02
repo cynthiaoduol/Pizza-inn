@@ -127,6 +127,9 @@ button #send{
   #pizzaDetails{
   display: none;
   cursor: pointer;
+  text-decoration:underline;
+  color: aqua;
+  font-size:20px;
   }
   #pizzaDetail{
   display: none;
@@ -143,6 +146,9 @@ button #send{
   #Cost{
   text-align: center;
   margin-top: 5%;
+  }
+  .card-title{
+    text-align: center;
   }
   
 
