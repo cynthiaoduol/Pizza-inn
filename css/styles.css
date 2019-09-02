@@ -55,6 +55,7 @@ body {
   text-align: center;
   position: absolute; 
   top:10%;
+  left:20%
 }
 /* .intro img{
   width:400px;
@@ -66,10 +67,12 @@ body {
   height: 300px;
   border-radius: 50%
 }
-.intro p{
+.intro h1{
+  color:rgb(44, 168, 44);
+  font-size:50px;
+}
+.intro p {
   color:white;
-  
-  line-height: 1.5;
 }
 .intro button {
   border:1px solid #6ab446;
