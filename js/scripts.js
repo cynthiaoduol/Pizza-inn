@@ -55,8 +55,8 @@ $(document).ready(function() {
   $(".header").height($(window).height());
 
   $("#orders").click(function(){
-    $("#order").show()
-  })
+    $("#order").show(1000)
+  });
 
  $("form#pizzaOrder").submit(function(event) {
      event.preventDefault();
