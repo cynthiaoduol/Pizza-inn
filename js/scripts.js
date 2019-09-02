@@ -9,7 +9,6 @@ function Order (pizzaSize, crust) {
  this.crust = crust;
  this.Topping1 = 500;
  this.Topping2 = 1000;
- this.Topping3 = 500;
  this.pizzaPrice = 0;
  this.pizzaNumber  = 1;
  this.pizzaNumbers = [];
@@ -34,7 +33,6 @@ Order.prototype.pizzaCost = function () {
      }
  this.pizzaPrice += this.Topping1;
  this.pizzaPrice += this.Topping2;
- this.pizzaPrice += this.Topping3;
  this.pizzaPrice *= this.pizzaNumber;
  //this.pizzaPrice *= this.pizzaNumbers;
  return this.pizzaPrice;
@@ -53,17 +51,21 @@ Order.prototype.finalCost = function () {
 //         return pizzaNumber;
 //       }
 //User Interface Logic
-$(document).ready(function() {
-  $('.header').height($(window).height());
+$(document).ready(function() { 
+  $(".header").height($(window).height());
+
+  $("#orders").click(function(){
+    $("#order").show()
+  })
+
  $("form#pizzaOrder").submit(function(event) {
      event.preventDefault();
    var pizzaSize = $("select#size").val();
    var crust = $("select#crust").val();
    var Topping1 = $("select#Topping1").val();
    var Topping2 = $("select#Topping2").val();
-   var Topping3 = $("select#Topping3").val();
    var pizzaNumbers = $("input#pizza-number").val();
-   var pizzaDetails = (pizzaNumbers + ", " + pizzaSize + ", " + crust + ", " + Topping1 + ", " + Topping2 + ", " + Topping3);
+   var pizzaDetails = (pizzaNumbers + ", " + pizzaSize + ", " + crust + ", " + Topping1 + ", " + Topping2);
    var newPizzaOrder = new Order(pizzaSize, crust);
    newPizzaOrder.pizzaCost();
    PizzatotalPrice.push(newPizzaOrder.pizzaPrice);
@@ -73,7 +75,7 @@ $(document).ready(function() {
    $("#pizzaDetails").show();
    $("#totalPizzaCost").text(newPizzaOrder.finalCost());
    $("#pizzaDetail").append("<p>" + pizzaDetails + "</p>");
-   $("#size, #crust, #Topping1, #Topping2, #Topping3, #pizza-number").val("");
+   $("#size, #crust, #Topping1, #Topping2, #pizza-number").val("");
  });
  $("#pizzaDetails").click(function() {
    $("#pizzaDetail").toggle();
