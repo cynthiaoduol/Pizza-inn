@@ -96,4 +96,44 @@ button #send{
   align-items: center;
 }
 
+.jumbotron{
+  background-image: url("/assets/King_Arthur_Pizza.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px;
+  color: black;
+}
+
+  .card{
+  /* background-image: url("https://patch.com/img/cdn20/users/22729282/20180427/110819/styles/raw/public/processed_images/denizo71_italian_food_pizza_shutterstock_132517535-1524841650-5657.jpg"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1;
+  box-shadow: 5px 10px 5px;
+  }  
+  /* h4{
+    display:none;
+  } */
+  #pizzaDetails{
+  display: none;
+  cursor: pointer;
+  }
+  #pizzaDetail{
+  display: none;
+  }
+  #deliver{
+  display: none;
+  }
+  #pickup{
+  display: none;
+  }
+  #checkout{
+  display: none;
+  }
+  #Cost{
+  text-align: center;
+  margin-top: 5%;
+  }
+  
+
 
