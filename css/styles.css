@@ -2,10 +2,12 @@ body {
   padding: 0;
   margin: 0;
   background: #f2f6e9;
+  overflow-x: hidden;
 }
 /*--- navigation bar ---*/
 .navbar {
   background:black;
+  position: fixed;
 }
 .nav-link{
   color: #fff;
@@ -45,6 +47,9 @@ body {
   left: 0;
   top: 0;
   background: rgba(0, 0, 0, 0.6);
+}
+ #order{
+  display:none; 
 }
 .intro{
   text-align: center;
@@ -97,9 +102,6 @@ button #send{
 }
 
 .jumbotron{
-  background-image: url("/assets/King_Arthur_Pizza.png");
-  background-repeat: no-repeat;
-  background-size: cover;
   padding: 100px;
   color: black;
 }
